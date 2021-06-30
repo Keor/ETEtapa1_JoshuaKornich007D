@@ -1,0 +1,86 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Caos News | Modificar Colaborador</title>
+</head>
+<body>
+    <div class="main">
+        <div class="content-top">
+        <h3>Modificando Colaborador</h3>
+        <h3>          x</h3>
+        <hr>
+        <div class="close_but"><i class="close1"> </i></div>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container content">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div class="register-top-grid">
+                        <div class=form-group>
+                            {{form.nomCompleto.label}}
+                            {{form.nomCompleto}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.rut.label}}
+                            {{form.rut}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.fono.label}}
+                            {{form.fono}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.direccion.label}}
+                            {{form.direccion}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.mail.label}}
+                            {{form.mail}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.pais.label}}
+                            {{form.pais}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.contrasena.label}}
+                            {{form.contrasena}}
+                        </div>
+
+                        <div class=form-group>
+                            {{form.foto.label}}
+                            <br>
+                            {{form.foto}}
+                        </div>
+
+                        <br><br>
+                    </div>
+                    <div class="clear">
+                        <br>
+                        <hr>
+                        <div class="clear"></div>
+                        <center><div class="col-ml-6">
+                            <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
+                            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar"></div></center>
+                    </div>
+                </form> 
+            </div>
+            <hr>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+{% endblock %}

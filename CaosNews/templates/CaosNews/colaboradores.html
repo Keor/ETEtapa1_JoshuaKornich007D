@@ -1,0 +1,72 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Figure Out All | COLABORADORES</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{% load static %}
+
+</head>
+<body>
+
+<!--Productos-->
+<div class="main">
+	<div class="content-top" style="background-color:cornsilk">
+        <h2>TODOS NUESTRO COLABORADORES</h2><br>
+        <h2>          x</h2>
+        <div class="container" ><li class="boton1 cart"><a href="{% url 'new_colaborador' %}">Agregar Nuevo Colaborador +</a></li></div>
+            <div class="main">
+                <div class="shop_top">
+                    <div class="container">
+                        <div class="container">
+                            
+                            {%for col in colaboradores%}
+                            <div class="col-md-6 shop_box shop_desc" style="border-style: groove">
+                                <br>
+                                <center><img src="{{col.foto.url}}" height="300" ></center>
+                                <hr>
+                                <h3>• Rut:</3h>
+                                <h3>{{col.rut}}</h3>
+                                <h3>• Nombre Completo:</3h>
+                                <h3>{{col.nomCompleto}}</3h>
+                                <h3>• Telefono:</3h>
+                                <h3>{{col.fono}}</3h>
+                                <h3>• Direccion:</3h>
+                                <h3>{{col.direccion}}</3h>
+                                <h3>• E-Mail:</3h>
+                                <h3>{{col.mail}}</3h>
+                                <h3>• Pais:</3h>
+                                <h3>{{col.pais}}</h3>
+                                <br>
+                                <br>
+                                <hr>
+                                <h3>Opciones</h3>
+                                <div class="row justify-content-around">
+                                    <ul class="buttons">
+                                        <li class="boton1 cart">
+                                            <a href="{% url 'mod_colaborador' col.rut%}">Modificar</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="buttons">
+                                        <li class="boton1 cart">
+                                            <a href="{% url 'del_colaborador' col.rut%}">Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+                            {%endfor%}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>							
+{% endblock %}	

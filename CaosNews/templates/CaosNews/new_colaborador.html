@@ -1,0 +1,94 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Caos News | Agregar Colaborador</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="text/javascript"
+    src="https://rawcdn.githack.com/franz1628/validacionKeyCampo/bce0e442ee71a4cf8e5954c27b44bc88ff0a8eeb/validCampoFranz.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+{% load static %}
+<script>
+
+    $(function () {
+
+        $('#nomCompleto').validCampoFranz(' abcdefghijklmnñopqrstuvwxyzáéíóúö');
+        $('#rut').validCampoFranz('kK-.0123456789');
+    });
+
+</script>
+
+</head>
+
+<body>
+    <!--Registro Colaborador-->
+    <div class="main">
+        <div class="shop_top">
+            <div class="container content">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="register-top-grid">
+                        <hr>
+                        <center><h2>NUEVO COLABORADOR</h2></center>
+                        <br>
+                        <!-- {{producto_new.as_p}} -->
+                        <div class=form-group>
+                            {{colaborador_new.rut.label}}
+                            {{colaborador_new.rut}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.nomCompleto.label}}
+                            {{colaborador_new.nomCompleto}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.fono.label}}
+                            {{colaborador_new.fono}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.direccion.label}}
+                            {{colaborador_new.direccion}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.mail.label}}
+                            {{colaborador_new.mail}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.pais.label}}
+                            {{colaborador_new.pais}}
+                        </div>
+
+                        <div class=form-group>
+                            {{colaborador_new.foto.label}}
+                            {{colaborador_new.foto}}
+                        </div>
+
+                        <br><br>
+                    </div>
+                    <div class="clear">
+                        <br>
+                        <div class="clear"></div>
+                        <hr>
+                        <center><div class="col-ml-6">
+                            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                            
+                            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                        </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock %}

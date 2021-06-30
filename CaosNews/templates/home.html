@@ -1,0 +1,162 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<head>
+	{%load static%}
+	<style>
+		.carousel-inner img {
+		width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+<!--Carrusel-->
+{% load static %}
+<div id="carrufig" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+	  <li data-target="#carrufig" data-slide-to="0" class="active"></li>
+	  <li data-target="#carrufig" data-slide-to="1"></li>
+	  <li data-target="#carrufig" data-slide-to="2"></li>
+	</ul>
+	
+	<!--Dentro del carrusel-->
+	<div class="carousel-inner">
+		<div class="carousel-caption">
+			<h1 class="titulo">CAOS NEWS</h1>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		<div class="carousel-item active">
+			<img src="{% static 'img/f1.jpg'%}" alt="" height="800">
+		</div>
+		<div class="carousel-item">
+			<img src="{% static 'img/f2.jpg'%}" alt="" height="800">
+		</div>
+		<div class="carousel-item">
+			<img src="{% static 'img/f3.jpg'%}" alt="" height="800">
+		</div>
+	</div>
+	  
+	<!-- Control carrusel -->
+	<a class="carousel-control-prev" href="#carrufig" data-slide="prev">
+	  <span class="carousel-control-prev-icon"></span>
+	</a>
+	<a class="carousel-control-next" href="#carrufig" data-slide="next">
+	  <span class="carousel-control-next-icon"></span>
+	</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+	<h1 style="text-align: center;">¡BIENVENIDOS!...</h1>
+	<br>
+	<h4 style="text-align: center;"><strong>Esta es nuestra gran página, ¡CAOS NEWS!</strong></h4>
+	<br>
+	<p style="text-align: justify">Cansados de los medios de comunicaciones tradicionales que no siempre informan con la verdad, nosotros como un grupo 
+		de periodistas independientes conformamos el colectivo de noticias <strong>“Caos news”</strong>.</p>
+	<br><p style="text-align: justify">Hemos decidido poner en nuestra plataforma web todas las noticias que han sido investigadas y que según su criterio
+		deben ser vistas por el <strong>pueblo.</strong> </p>
+	<br>
+	<p><strong>¡Gracias por pasar y venir! :D</strong></p>
+	<p style="text-align: center;">
+	<img src="{% static 'img/YoshiGif.gif'%}">
+	<img src="{% static 'img/BooGif.gif'%}" width="250"></p>
+
+	<!--Productos-->
+	<div class="main">
+		<div class="content-top">
+			<h2>Noticias Destacadas</h2><br>
+			<h2>          x</h2>
+			<div class="close_but"><i class="close1"></i></div>
+			<div class="main">
+				<div class="shop_top">
+					<div class="container">
+						<div class="contenedor">
+							
+							<div class="col-md-6">
+								<figure>
+								<img src="{% static 'img/corona.jpg'%}"  class="img-responsive"  alt=""/>
+								<div class="capa">
+									<br>
+									<h3>*</h3>
+									<br>
+									<h3>*</h3>
+									<h3>Publicado:</h3>
+									<h3>*</h3>
+									<h3>20-10-2021</h3>
+									<br>
+									<h3>*</h3>
+									<br>
+									<h3>*</h3>
+								</div>
+								</figure>
+								<br>
+								<div class="col-md-6">
+									<h3>¡La cura del Coronavirus!</a></h3>
+									<br>
+									<p>La mayoría de las personas que enferman de ‎COVID 19 experimentan síntomas de leves a ‎moderados
+									y se recuperan sin tratamiento ‎especial. ‎Pero después de tanto tiempo al fin...	</p>
+									
+									<ul class="buttons">
+										<li class="boton1 cart"><a href="#">Ver más...</a></li>
+										<div class="clear"> </div>
+									</ul>
+								</div></a>
+							</div>
+
+							<div class="col-md-6">
+								<figure>
+								<img src="{% static 'img/pini.jpg'%}"  class="img-responsive"  alt=""/>
+								<div class="capa">
+									<br>
+									<h3>*</h3>
+									<br>
+									<h3>*</h3>
+									<h3>Publicado:</h3>
+									<h3>*</h3>
+									<h3>18-10-2021</h3>
+									<br>
+									<h3>*</h3>
+									<br>
+									<h3>*</h3>
+								</div>
+								</figure>
+								<br>
+								<div class="col-md-6">
+									<h3>Piñera en su propia trampa</a></h3>
+									<br>
+									<p>Es una farsa que nuestro presidente aún se niegue a firmar el Acuerdo Escazú, el cual podría dar
+									garantías al pueblo chileno del compromiso del país con el desarrollo sostenible y la justicia ambiental...</p>
+									<ul class="buttons">
+										<li class="boton1 cart"><a href="#">Ver más...</a></li>
+										<div class="clear"> </div>
+									</ul>
+								</div></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>				
+{% endblock %}
